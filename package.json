@@ -1,0 +1,17 @@
+{
+  "name": "libs",
+  "version": "0.1.0",
+  "main": "./index",
+  "author": "wookets <wookets@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/wookets/node-libs.git"
+  },
+  "engines": {
+    "node": ">= 0.8.x"
+  },
+  "dependencies": {
+  },
+  "devDependencies": {
+  }
+}
