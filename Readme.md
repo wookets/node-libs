@@ -23,7 +23,7 @@ var libs = require('libs')('lodash express request')
 With coffeescript (or Harmony destructuring)
 
 ```
-{lodash, express, request} = require('libs')('lodash express request')
+{_, express, request} = require('libs')('lodash express request')
 ```
 
 
