@@ -3,8 +3,8 @@
 
 This is a very simple module which does two things;
 
-1) It allows you to make any require() statements from a single line.
-2) It looks in a top level 'lib' folder for local based node modules.
+1. It allows you to make any require() statements from a single line.
+2. It looks in a top level 'lib' folder for local based node modules.
 
 ## Install
 
