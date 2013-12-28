@@ -1,12 +1,12 @@
 
 module.exports = function(modules) {
-  var found = {};
+  var found = [];
   modules.split(' ').forEach(function(mod) {
     try {
-      found[mod] = require(mod);
+      found.push(require(mod));
     } catch (err) {
       if (err.code === 'MODULE_NOT_FOUND') {
-        found[mod] = require('../../lib/' + mod);
+        found.push(require('../../lib/' + mod));
       }
     }
   });
