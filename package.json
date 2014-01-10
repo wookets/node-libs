@@ -8,7 +8,7 @@
     "url": "git://github.com/wookets/node-libs.git"
   },
   "engines": {
-    "node": ">= 0.8.x"
+    "node": ">= 0.10.x"
   },
   "dependencies": {
   },

@@ -23,7 +23,7 @@ var libs = require('libs')('lodash express request')
 With coffeescript (or Harmony destructuring)
 
 ```
-{_, express, request} = require('libs')('lodash express request')
+[_, express, request] = require('libs')('lodash express request')
 ```
 
 
@@ -49,3 +49,10 @@ I structure my node projects
 - server - server code
 - static - static file serving
 - lib - project specific libraries that may be private, but will only be used within this specific project and don't warrant a seperate project (this is where paw-lib pulls from)
+
+## Change log
+
+### 0.1.1
+
+- libs returns an array now, so that you can rename *cough* lodash *cough*
+
