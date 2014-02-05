@@ -1,56 +1,36 @@
 
-# Libs (aka node-libs, aka paw-libs)
+# libs
 
-This is a very simple module which does two things;
-
-1. It allows you to make any require() statements from a single line.
-2. It looks in a top level 'lib' folder for local based node modules.
+This package makes loading project lib modules easier.
 
 ## Install
 
-In package.json you can do...
+In package.json, you can do...
 
-```"libs": "git://github.com/wookets/node-libs.git#master"```
+```"libs": "https://github.com/wookets/node-libs/0.2.0"```
 
 ## Usage
 
-### Multiple requires on one line
-
 ```
-var libs = require('libs')('lodash express request')
+var libs = require('libs')
+
+libs.sessionManager() // assuming this exists in {project_root}/lib/sessionManager.js
+libs.route_checker() // assuming this exists in {project_root}/lib/route-checker.js
+libs.routes.helper // assuming this exists in {project_root}/lib/routes/helper.js
+
 ```
 
 With coffeescript (or Harmony destructuring)
 
 ```
-[_, express, request] = require('libs')('lodash express request')
+{sessionManager, route_checker, routes: {helper}} = require('libs')
 ```
-
-
-### Local node modules
-
-Assumes your project specific libraries are in...
-{project}/lib/awesome-sauce.js
-
-Then just...
-
-```
-var myLocalAwesomeNodeModule = require('libs')('awesome-sauce');
-```
-
-## Why?
-
-I structure my node projects
-
-{root}
-- node_modules - vendor specific packages
-- test - test classes
-- scripts - migration scripts or batch jobs
-- server - server code
-- static - static file serving
-- lib - project specific libraries that may be private, but will only be used within this specific project and don't warrant a seperate project (this is where paw-lib pulls from)
 
 ## Change log
+
+### 0.2.0
+
+- Usage changed.
 
 ### 0.1.1
 
