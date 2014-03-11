@@ -4,7 +4,8 @@ assert = require('assert');
 describe('libs', function() {
 
   it('should read in libs', function() {
-    var libs = require('./node_modules/libs');
+    var libs = require('../');
+    libs.directory('./lib');
     console.log('libs', libs);
     assert.equal(libs.meow, 'meow');
     assert.equal(libs.pants, 'pants');

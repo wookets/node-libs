@@ -1,32 +1,38 @@
 
 # libs
 
-This package makes loading project lib modules easier.
+It makes loading local project lib node_modules easier.
 
 ## Install
 
 In package.json, you can do...
 
-```"libs": "https://github.com/wookets/node-libs/0.2.0"```
+```"libs": "https://github.com/wookets/node-libs/0.4.0"```
 
 ## Usage
 
 ```
-var libs = require('libs')
+var libs = require('libs');
+libs.directory('./lib'); // loads everything in this directory into the libs, only need to call once
 
-libs.sessionManager() // assuming this exists in {project_root}/lib/sessionManager.js
-libs.route_checker() // assuming this exists in {project_root}/lib/route-checker.js
-libs.routes.helper // assuming this exists in {project_root}/lib/routes/helper.js
-
+libs.sessionManager() // assuming this exists in {directory}/sessionManager.js
+libs.routeChecker() // assuming this exists in {directory}/route-checker.js
+libs.routes // assuming this exists in {directory}/routes/index.js and you have an index file
 ```
 
 With coffeescript (or Harmony destructuring)
 
 ```
-{sessionManager, route_checker, routes: {helper}} = require('libs')
+{sessionManager, routeChecker, routes: {helper}} = require('libs')
 ```
 
 ## Change log
+
+### 0.4.0
+- added a directory method so you can set load a directory or many directories if needed
+
+### 0.3.0
+- removed recursion, because let's keep things simple and you lib should be decently flat anyway
 
 ### 0.2.0
 
