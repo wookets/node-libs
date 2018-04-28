@@ -1,6 +1,8 @@
 
 # libs
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/wookets/node-libs.svg)](https://greenkeeper.io/)
+
 It makes loading local project lib node_modules easier.
 
 ## Install
